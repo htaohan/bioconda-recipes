@@ -12,9 +12,6 @@ build:
   noarch: python
   run_exports:
    - {{ pin_subpackage("scgbinner", max_pin="x.x") }}
-  entry_points:
-    - scgbinner = SCGBinner.wrapper:main
-    - split_contigs = SCGBinner.Split_contigs:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
